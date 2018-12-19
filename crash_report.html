@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+<head>
+	<link href="css/bootstrap.css" rel="stylesheet" />
+
+	<link href="css/bootstrap-theme.css" rel="stylesheet" />
+
+
+	<script src="js/bootstrap.min.js"></script>
+	<style>
+	h1 {color:white; margin-left: 90px}
+	h2 {color:white; margin-left: 70px}
+	h3 {color:black; margin-left: 350px; margin-top:50px; font-family: sans-serif }
+	h4{color:black; margin-left: 150px; margin-top:135px; font-family: sans-serif}
+	h5{color:black; margin-left: 150px; margin-top:42px; font-family: sans-serif; }
+	h6{color:black; margin-left: 150px; margin-top:139px; font-family: sans-serif}
+	.err {position:absolute; margin-top:15%; margin-left:5%; transform: translate(-5%,-5%);float:right; }
+	.caution{position:absolute; margin-top:3%; margin-left:15%; transform: translate(-5%,-5%);float:right;}
+	</style>
+
+
+	<meta charset="utf-8">
+	<title>Crash Report</title>
+</head>
+<body style="background-color:#DFDEDE;">
+	<nav class="navbar navbar-light navbar-expand-md" style="background-color:#D0D0D0;">
+		<div class="container-fluid"><a class="navbar-brand" href="#">
+			<img src="src/logo.png" width="340" height="49" class="d-inline-block align-top" alt=""></a>
+			<div
+			class="collapse navbar-collapse" id="navcol-1">
+			<ul class="nav navbar-nav">
+				<li class="nav-item" role="presentation"><a class="nav-link" href="" style="color:rgba(0,0,0,0.9); font-weight: bold;">Store</a></li>
+			</ul>
+			<ul class="nav navbar-nav">
+				<li class="nav-item" role="presentation"><a class="nav-link" href="" style="color:rgba(0,0,0,0.9); font-weight: bold;">Comparision</a></li>
+			</ul>
+
+			<div class="dropdown ml-auto">
+				<button type="button" class="btn btn-success">Sell a car</button>
+			</div>
+			<a href="" class="btn btn-primary" role="button">Notifications</a>
+			<form action = '#'>
+				<input class="btn btn-primary" type='submit' style="background-color:rgb(255,15,0);" value="Log Out">
+			</form>
+		</div>
+	</nav>
+
+	<nav class="navbar navbar-light navbar-expand-md" style="background-color:#DAA520;">
+		<div class="container-fluid"><a class="navbar-brand" href="#">
+			<img src="src/crash.jpg" width="340" height="100" class="d-inline-block align-top" alt=""></a>
+			<div
+			class="collapse navbar-collapse" id="navcol-1">
+			<ul class="nav navbar-nav">
+				<h1>CRASH REPORT FOR CHOSEN CAR</h1>
+			</ul>
+			<ul class="nav navbar-nav">
+				<li class="nav-item" role="presentation"><a class="nav-link" href="" style="color:rgba(0,0,0,0.9); font-weight: bold;"></a></li>
+			</ul>
+		</div>
+	</nav>
+
+
+	<div style="min-width:100%;">
+		<div class="container-fluid" style="margin:10;">
+			<div class="row" >
+				<div class="col-1.5	" style="background-color:#A0A0A0;">
+					<ul class="list-unstyled" style="">
+						<h2> Upload a Car Image</h2>
+						<img src="" style="display:none" height="400" id="image">
+						<input type="file" onchange="showImage.call(this)">
+						<script>
+ 							function showImage(){
+								if(this.files && this.files[0]){
+									var obj = new FileReader();
+									obj.onload = function(data){
+										var image = document.getElementById("image");
+										image.src = data.target.result;
+										image.style.display = "block";
+									}
+									obj.readAsDataURL(this.files[0]);
+								}
+							}
+						</script>
+						<div class="dropdown ml-auto">
+							<a href= "crash_report_analyze.html" ><button type="button" class="btn btn-success">ANALYZE</button></a>
+						</div>
+					</ul>
+					<div id="left_menu_div" style="height:400px; width:600px; border: 0px solid rgb(255,255,255); "></div>
+					<ul class="list-unstyled">
+						<li><a href="" style="color:rgb(255,255,255);font-size:18px;"></a></li>
+						<li><a href="" style="color:rgb(255,255,255);font-size:18px;"></a></li>
+						<li></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+</div>
