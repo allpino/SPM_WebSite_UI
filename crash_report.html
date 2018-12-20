@@ -3,9 +3,7 @@
 <head>
 	<link href="css/bootstrap.css" rel="stylesheet" />
 
-	<link href="css/bootstrap-theme.css" rel="stylesheet" />
-
-
+		<script src="js/jquery-3.3.1.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<style>
 	h1 {color:white; margin-left: 90px}
@@ -48,7 +46,32 @@
 
 				<a href="sell_en.html" class="btn btn-success" style="margin-right: 5px" role="button">Sell a car</a>
 			</div>
-			<a href="notification_en.html" class="btn btn-primary" style="margin-right: 5px" role="button">Notifications</a>
+			<button type="button" class="btn btn-primary" data-toggle="modal"  style="margin-right: 5px" data-target="#exampleModal">
+  Notifications
+</button>
+
+
+
+				<!-- Modal -->
+				<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+					<div class="modal-dialog" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title" id="exampleModalLabel">Notifications</h5>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+							</div>
+							<div class="modal-body">
+								You have 1 new message from user: <b>BacakBoi49</b>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+								
+							</div>
+						</div>
+					</div>
+				</div>
 			<form action = 'login_en.html'>
 				<input class="btn btn-primary" type='submit' style="background-color:rgb(255,15,0);" value="Log Out">
 			</form>
@@ -56,7 +79,7 @@
 	</nav>
 	<nav class="navbar navbar-light navbar-expand-md" style="background-color:#DAA520;">
 		<div class="container-fluid"><a class="navbar-brand" href="#">
-			<img src="src/crash.jpg" width="340" height="100" class="d-inline-block align-top" alt=""></a>
+			<img src="src/crash.png" width="340" height="100" class="d-inline-block align-top" alt=""></a>
 			<div
 			class="collapse navbar-collapse" id="navcol-1">
 			<ul class="nav navbar-nav">
