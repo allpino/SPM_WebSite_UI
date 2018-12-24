@@ -1,0 +1,139 @@
+<!doctype html>
+
+<html>
+<head>
+	<link href="css/bootstrap.css" rel="stylesheet" />
+
+		<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+
+	<style>
+	#searchImage {position:absolute;transition: .5s ease;top: 25%;left: 45%; background-color:blue; color: white;}
+	#searchbutton{position:absolute;transition: .5s ease;top: 40.5%;left: 6%; height: 45px; width: 90px ;background-color: red}
+	.search{  position:absolute;  top:68%;  left:43%;  transform: translate(-10%,-85%)}
+	h2{color: red; font-size: 20x;}
+	</style>
+
+	<meta charset="utf-8">
+	<title>Index</title>
+</head>
+<body style="background-color:#DFDEDE;">
+	<nav class="navbar navbar-light navbar-expand-md" style="background-color:#D0D0D0;">
+		<div class="container-fluid"><a class="navbar-brand" href="#">
+			<img src="src/logo.png" width="340" height="49" class="d-inline-block align-top" alt=""></a>
+
+			<div
+			class="collapse navbar-collapse" id="navcol-1">
+			<ul class="nav navbar-nav">
+				<li class="nav-item" role="presentation"><a class="nav-link" href="store_en.html" style="color:rgba(0,0,0,0.9); font-weight: bold;">Store</a></li>
+			</ul>
+			<ul class="nav navbar-nav">
+				<li class="nav-item" role="presentation"><a class="nav-link" href="comparision_en.html" style="color:rgba(0,0,0,0.9); font-weight: bold;">Comparision</a></li>
+			</ul>
+
+
+			<div class="dropdown ml-auto">
+
+				<a href="store_tr.html">
+				<img src="src/turkish_flag.png" class="img-responsive" alt="Cinque Terre">
+			</a>
+			<a href="store_en.html">
+				<img src="src/english_flag.png" style="margin-right: 30px" class="img-responsive" alt="Cinque Terre">
+			</a>
+
+				<a href="sell_en.html" class="btn btn-success" style="margin-right: 5px" role="button">Sell a car</a>
+			</div>
+			 <button type="button" class="btn btn-primary" data-toggle="modal"  style="margin-right: 5px" data-target="#exampleModal">
+  Notifications
+</button>
+
+<a href="search_en.html" class="btn btn-primary" id="searchImage" role="button">Search Car with Image</a>
+<div class="search">
+		<img src= "src/search.png" height="38" width="38">
+</div>
+
+
+				<!-- Modal -->
+				<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+					<div class="modal-dialog" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title" id="exampleModalLabel">Notifications</h5>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+							</div>
+							<div class="modal-body">
+								You have 1 new message from user: <b>BacakBoi49</b>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+
+			<form action = 'login_en.html'>
+				<input class="btn btn-primary" type='submit' style="background-color:rgb(255,15,0);" value="Log Out">
+			</form>
+		</div>
+	</nav>
+
+
+	<div style="min-height: 10%;">
+		<div class="container" style="margin:0;">
+			<div class="input-group mb-3">
+				<div class="input-group-prepend">
+					<span class="input-group-text" id="basic-addon1">Price Range</span>
+				</div>
+				<input type="text" class="form-control" placeholder="0 TL - 10000000000000 TL" aria-label="0 TL - 10000000000000 TL" aria-describedby="basic-addon1">
+			</div>
+
+			<div class="input-group mb-3">
+				<div class="input-group-prepend">
+					<span class="input-group-text" id="basic-addon1">Place</span>
+				</div>
+				<input type="text" class="form-control" placeholder="Place" aria-label="Place" aria-describedby="basic-addon1">
+			</div>
+
+			<div class="input-group mb-3">
+  <div class="input-group-prepend">
+		<h2> Upload the image of car that you want to search </h2>
+
+			<div class="container-fluid">
+				<div class="row" >
+		<img src="" style="display:none" height="400" id="image">
+		<input type="file" onchange="showImage.call(this)">
+		<script>
+			function showImage(){
+				if(this.files && this.files[0]){
+					var obj = new FileReader();
+					obj.onload = function(data){
+						var image = document.getElementById("image");
+						image.src = data.target.result;
+						image.style.display = "block";
+					}
+					obj.readAsDataURL(this.files[0]);
+				}
+			}
+		</script>
+</div>
+</div>
+
+
+
+			</div>
+
+		</div>
+</div>
+<div>
+	<a href="search_car_en.html" class="btn btn-success" style="margin-right: 5px" id="searchbutton" role="button">Search!</a>
+</div>
+
+
+
+</body>
+</html>
